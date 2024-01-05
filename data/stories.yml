@@ -1,0 +1,114 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: take order 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_menu
+  - action: utter_give_menu
+  - action: utter_ask_menu
+  - intent: order_food
+    entities:
+      - menu_item: "Lasagne"
+  - action: action_place_order
+
+- story: take order 2
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: give_menu
+    - action: utter_give_menu
+    - action: utter_ask_menu
+    - intent: order_food
+      entities:
+        - menu_item: "Pizza"
+    - action: action_place_order
+
+- story: take order 3
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: give_menu
+    - action: utter_give_menu
+    - action: utter_ask_menu
+    - intent: order_food
+      entities:
+        - menu_item: "Hot-dog"
+    - action: action_place_order
+
+- story: take order 4
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: give_menu
+    - action: utter_give_menu
+    - action: utter_ask_menu
+    - intent: order_food
+      entities:
+        - menu_item: "Burger"
+    - action: action_place_order
+
+- story: take order 5
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: give_menu
+    - action: utter_give_menu
+    - action: utter_ask_menu
+    - intent: order_food
+      entities:
+        - menu_item: "Spaghetti Carbonara"
+    - action: action_place_order
+
+- story: take order 6
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: give_menu
+    - action: utter_give_menu
+    - action: utter_ask_menu
+    - intent: order_food
+      entities:
+        - menu_item: "Tiramisu"
+    - action: action_place_order
+
+- story: cancel order
+  steps:
+  - intent: cancel_order
+  - action: utter_cancel_confirmation
+
+- story: tell opening hours
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: opening_hours
+    - action: utter_opening_hours

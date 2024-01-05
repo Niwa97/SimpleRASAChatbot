@@ -1,0 +1,133 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: opening_hours
+  examples: |
+    - when is the restaurant open?
+    - whan are you open?
+    - when can I visit restaurant?
+    - when can I visit your resturant?
+
+- intent: give_menu
+  examples: |
+    - what can I order?
+    - can you show me menu?
+    - can you tell me what do you have in menu?
+    - what do you have to offer?
+    - what positions do you have in menu?
+    - what can I eat in your resteurant?
+
+- intent: order_food
+  examples: |
+    - I want to order a [lasagne]{ "entity":"menu_item","value": "lasagne" }
+    - I want to order a [pizza]{ "entity":"menu_item","value": "pizza" }
+    - I want to order a [hot-dog]{ "entity":"menu_item","value": "hot-dog" }
+    - I want to order a [burger]{ "entity":"menu_item","value": "burger" }
+    - I want to order a [spaghetti]{ "entity":"menu_item","value": "spaghetti" }
+    - I want to order a [tiramisu]{ "entity":"menu_item","value": "tiramisu" }
+    - Can I have a [lasagne]{ "entity":"menu_item","value": "lasagne" }, please?
+    - Can I have a [pizza]{ "entity":"menu_item","value": "pizza" }, please?
+    - Can I have a [hot-dog]{ "entity":"menu_item","value": "hot-dog" }, please?
+    - Can I have a [burger]{ "entity":"menu_item","value": "burger" }, please?
+    - Can I have a [spaghetti]{ "entity":"menu_item","value": "spaghetti" }, please?
+    - Can I have a [tiramisu]{ "entity":"menu_item","value": "tiramisu" }, please?
+    - I'd like to order [lasagne]{ "entity":"menu_item","value": "lasagne" } for delivery
+    - I'd like to order [pizza]{ "entity":"menu_item","value": "pizza" } for delivery
+    - I'd like to order [hot-dog]{ "entity":"menu_item","value": "hot-dog" } for delivery
+    - I'd like to order [burger]{ "entity":"menu_item","value": "burger" } for delivery
+    - I'd like to order [spaghetti]{ "entity":"menu_item","value": "spaghetti" } for delivery
+    - I'd like to order [tiramisu]{ "entity":"menu_item","value": "tiramisu" } for delivery
+
+- intent: cancel_order
+  examples: |
+    - I want to cancel my order
+    - Please cancel my food order
+    - I have changed my mind, don't deliver the food

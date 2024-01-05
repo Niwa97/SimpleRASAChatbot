@@ -1,0 +1,34 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say open hours when user asked
+  steps:
+    - intent: opening_hours
+    - action: utter_opening_hours
+
+- rule: Show menu when asked
+  steps:
+    - intent: give_menu
+    - action: utter_give_menu
+    - action: utter_ask_menu
+
+- rule: Confirm order
+  steps:
+    - intent: order_food
+    - action: action_place_order
+
+- rule: Cancel order
+  steps:
+    - intent: cancel_order
+    - action: utter_cancel_confirmation
