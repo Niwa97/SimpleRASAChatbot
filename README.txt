@@ -1,0 +1,3 @@
+- run "ngrok http 5005"
+- run "rasa run actions" in actions directory
+- run "rasa run --credentials credentials.yml --connector slack --endpoints endpoints.yml"
